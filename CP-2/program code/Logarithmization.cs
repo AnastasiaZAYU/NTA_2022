@@ -22,7 +22,7 @@ namespace NTA_cp2
                 rep.RemoveAt(i + 1);
             }
             double ans = Comparison(x, rep, n - 1);
-            Console.WriteLine(ans);
+            Console.WriteLine("Результат дискретного логарифмування = {0}", ans);
         }
 
         private double Comparison(List<double> x, List<double> m, double M)
@@ -73,7 +73,7 @@ namespace NTA_cp2
         private List<List<double>> Table(List<double> rep, double a, double n)
         {
             List<List<double>> r = new List<List<double>>();
-            for (int i = 0; i < rep.Count; i += 2) 
+            for (int i = 0; i < rep.Count; i += 2)
                 r.Add(Ri(a, rep[i], n));
             return r;
         }
